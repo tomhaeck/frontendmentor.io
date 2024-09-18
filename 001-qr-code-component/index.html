@@ -2,27 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | QR code component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+    :root {
+      --white: hsl(0, 0%, 100%);
+      --slate-300: hsl(212, 45%, 89%);
+      --slate-500: hsl(216, 15%, 48%);
+      --slate-900: hsl(218, 44%, 22%);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--slate-300);
+
+      height: 100vh;
+
+      display: flex;
+    }
+
+    .card {
+      background-color: var(--white);
+
+      width: 320px;
+      height: 499px;
+      border-radius: 20px;
+      padding: 16px;
+      margin: auto;
+    }
+
+    .card-image {
+    }
+
+    .card-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card-text {
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    .card-text h1 {
+      font-family: "Outfit", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+
+      font-size: 22px;
+
+      line-height: 120%;
+      letter-spacing: 0;
+
+      color: var(--slate-900);
+
+      margin-bottom: 16px;
+    }
+
+    .card-text p {
+      font-family: "Outfit", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+
+      font-size: 15px;
+
+      line-height: 140%;
+      letter-spacing: 0.2px;
+
+      color: var(--slate-500);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+
+      width: 100%;
+      padding: 16px;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
 <body>
 
-  Improve your front-end skills by building projects
+  <section class="card">
+    <div class="card-image">
+      <img src="images/image-qr-code.png" alt="https://wwww.frontendmentor.io">
+    </div>
+    <div class="card-text">
+      <h1>Improve your front-end skills by building projects</h1>
+      <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
+  </section>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/tomhaeck">Tom Haeck</a>.
+  </footer>
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
