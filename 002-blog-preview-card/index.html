@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <style>
+    :root {
+      --yellow: hsl(47, 88%, 63%);
+
+      --white: hsl(0, 0%, 100%);
+      --grey: hsl(0, 0%, 50%);
+      --black: hsl(0, 0%, 7%);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: var(--yellow);
+
+      height: 100vh;
+
+      display: flex;
+    }
+
+    .card {
+      background-color: var(--white);
+
+      width: 320px;
+      height: 499px;
+
+      padding: 16px;
+      margin: auto;
+
+      border-radius: 20px;
+    }
+
+    .card-image {
+    }
+
+    .card-image img {
+      width: 100%;
+
+      border-radius: 20px;
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <section class="card">
+
+    <div class="card-image">
+      <img src="assets/images/illustration-article.svg" alt="">
+    </div>
+    <div class="card-text">
+      <p><span>Learning</span></p>
+      <p>Published 21 Dec 2023</p>
+      <h1>HTML & CSS foundations</h1>
+      <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
+      <p>
+        <img src="assets/images/image-avatar.webp" alt="image-avatar">
+        Greg Hooper
+      </p>
+    </div>
+
+  </section>
+<!--  <div class="attribution">-->
+<!--    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. -->
+<!--    Coded by <a href="#">Your Name Here</a>.-->
+<!--  </div>-->
+</body>
+</html>
