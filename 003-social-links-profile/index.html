@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Social links profile</title>
+
+  <style>
+    :root {
+      --green: hsl(75, 94%, 57%);
+      --white: hsl(0, 0%, 100%);
+      --grey-700: hsl(0, 0%, 20%);
+      --grey-800: hsl(0, 0%, 12%);
+      --grey-900: hsl(0, 0%, 8%);
+    }
+
+    *, *:before, *:after {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    @font-face {
+      font-family: inter;
+      src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+    }
+
+    body {
+      background-color: var(--grey-900);
+      color: var(--white);
+
+      font-family: inter, sans-serif;
+      font-size: 14px;
+
+      line-height: 150%;
+      letter-spacing: 0;
+
+      height: 100vh;
+
+      display: flex;
+    }
+
+    .card {
+      background-color: var(--grey-800);
+
+      width: 384px;
+      height: 611px;
+      border-radius: 12px;
+      padding: 40px;
+      margin: auto;
+
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    .card-image {
+      height: 88px;
+
+      display: flex;
+    }
+
+    .card-image img {
+      width: 88px;
+      border-radius: 44px;
+
+      margin: auto;
+    }
+
+    .card-name-location h1 {
+      font-size: 24px;
+      font-weight: 600;
+
+      height: 36px;
+      margin-bottom: 4px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-name-location p {
+      color: var(--green);
+
+      font-weight: 700;
+    }
+
+    .card-bio {
+      font-weight: 400;
+    }
+
+    .card-socials {
+      list-style-type: none;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: 16px;
+    }
+
+    .card-social {
+      background-color: var(--grey-700);
+
+      font-weight: 700;
+
+      height: 45px;
+      border-radius: 8px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-social:hover {
+      background-color: var(--green);
+      color: var(--grey-900);
+    }
+
+    @media all and (max-width: 500px) {
+      .card {
+        width: 327px;
+        height: 579px;
+        padding: 24px;
+      }
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+
+      width: 100%;
+      padding: 16px;
+
+      position: absolute;
+      bottom: 0;
+    }
+
+    .attribution a {
+      color: var(--green);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    <div class="card-image">
+      <img src="assets/images/avatar-jessica.jpeg" alt="avatar-jessica">
+    </div>
+    <div class="card-name-location">
+      <h1>Jessica Randall</h1>
+      <p>London, United Kingdom</p>
+    </div>
+    <p class="card-bio">"Front-end developer and avid reader."</p>
+    <ul class="card-socials">
+      <li class="card-social">GitHub</li>
+      <li class="card-social">Frontend Mentor</li>
+      <li class="card-social">LinkedIn</li>
+      <li class="card-social">Twitter</li>
+      <li class="card-social">Instagram</li>
+    </ul>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/tomhaeck">Tom Haeck</a>.
+  </div>
+</body>
+</html>
