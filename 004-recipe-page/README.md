@@ -21,71 +21,92 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](#)
+- [Live Site URL](https://tomhaeck.github.io/frontendmentor.io/004-recipe-page/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
+- HTML
 - CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CSS Flexbox
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+The way how the text is structured follows as close as possible how it is defined 
+by the Figma file.  For instance, the `<h1>` element 'Simple Omelette Recipe'
+is grouped together with the paragraph below ('An easy and quick dish [...]'),
+because it is also grouped together in the Figma file.  This allows for easier
+translation of the spacings from Figma to HTML/CSS.
 
-To see how you can add code snippets, see below:
+The HTML5's semantic elements `<main>` and `<section>` were used.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+Color variables like e.g. `--white: hsl(0, 0%, 100%)`, described in the style-guide
+are declared in a `:root` element for global scoping.
+
+Do not forget a CSS reset for e.g. `box-sizing`, `padding` and `margin`.
+
+Define font properties that are mostly used in the document, like `font-weight`, `font-size`
+and `letter-spacing` and `line-height`, as generally as possible, 
+like e.g. in the body.  These can be overwritten for specific
+paragraphs if needed.  This is the principle of *Cascaded* style sheets!
+
+If the `.attribution` section is positioned absolutely (`position: absolute`) 
+with respect to the body, the body needs to have the property  `position: relative` (or analogous).
+
+Items in an `<ul>` or `<ol>` list can be spaced by declaring it a flex container.
+
+The bullet point markers of an `<ul>` or `<ol>` list can be targeted e.g. as follows:
+`ul li::marker`.  `::marker` is a pseudo-element, as compared to e.g. `:hover` which is 
+a pseudo-class.
+
+Do not shy away from using ad hoc's `margin-bottom` instead of declaring everything a flex container
+to control spacing.
+
+The margins defined by Figma sometimes do not correspond to the ones from the 
+`{desktop|mobile}-design.jpg`.  E.g. Figma specifies a top margin of 128px between 
+the top and the recipe-card, whereas I measure 122px from the design jpg.  Same goes 
+for the space between the recipe image and title.
+
+It is possible to drill down an HTML hierachy using CSS selectors as follows:
+`.recipe-preparation-time ul li::marker`.
+
+If a table has `border-collapse: collapse`, there are no gaps between cells.
+Borders in a table are specified by declaring borders on the constituing `<th>` and `<td>` elements.
+The first and last row's cells can be selected as follows.
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+tr:first-child th, tr:first-child td {
+    border-top: unset;
+    padding-top: 0;
+
+}
+
+tr:last-child th, tr:last-child td {
+    border-bottom: unset;
+    padding-bottom: 0;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+Use media queries to change the layout for mobile screens.  For the mobile design, 
+the recipe image extends beyond its container by using negative margins.
+Note also the use of the CSS built-in `calc()` function:
+```css
+@media all and (max-width: 500px) {
+    h1 {
+        font-size: 36px;
+    }
+    .recipe-image img {
+          width: calc(100% + 2*32px);
+          border-radius: 0px;
+          /* Negative margins allow elements to go outside the
+           bounds of the parent element */
+          margin: -40px -32px 36px -32px;
+      }
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Tom Haeck](https://github.com/tomhaeck)
+- Frontend Mentor - [@tomhaeck](https://www.frontendmentor.io/profile/tomhaeck)
