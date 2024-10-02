@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+    :root {
+      --dark-cyan: hsl(158, 36%, 37%);
+      --even-darker-cyan: hsl(158, 42%, 18%);
+      --cream: hsl(30, 38%, 92%);
+      --very-dark-blue: hsl(212, 21%, 14%);
+      --dark-grayish-blue: hsl(228, 12%, 48%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--dark-grayish-blue);
+
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 164%;
+
+      height: 100vh;
+
+      display: flex;
+    }
+
+    .product {
+      background-color: var(--white);
+
+      width: 600px;
+      height: 450px;
+      border-radius: 10px;
+      padding: 0;
+      margin: auto;
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .product-image img {
+      width: auto;
+      height: 100%;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .product-info {
+      padding: 32px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-subtitle {
+      font-size: 12px;
+
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    .product-title {
+      color: var(--very-dark-blue);
+
+      font-family: Fraunces, serif;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 100%;
+
+      margin-top: -16px;
+    }
+
+    .product-price-discount {
+      color: var(--dark-cyan);
+
+      font-family: fraunces, serif;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 100%;
+    }
+
+    .product-price-original {
+      font-size: 13px;
+      margin-left: 16px;
+
+      text-decoration: line-through;
+      vertical-align: super;
+    }
+
+    .product-add-to-cart {
+      background-color: var(--dark-cyan);
+      color: var(--white);
+
+      font-weight: 700;
+
+      width: 100%;
+      height: 48px;
+      border-radius: 8px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-add-to-cart:hover {
+      background-color: var(--even-darker-cyan);
+      cursor: pointer;
+    }
+
+    .product-add-to-cart img {
+      margin-right: 12px;
+    }
+
+    @media all and (max-width: 500px) {
+      .product {
+        width: 91%;
+        height: 611px;
+
+        flex-direction: column;
+      }
+
+      .product-image {
+        height: 40%;
+      }
+
+      .product-image img {
+        content: url("images/image-product-mobile.jpg");
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .product-info {
+        height: 60%;
+        padding: 16px 24px 24px 24px;
+      }
+
+      .product-title {
+        margin-top: -10px;
+      }
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+
+      width: 100%;
+      padding: 2px;
+
+      position: absolute;
+      bottom: 0;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="product">
+    <div class="product-image">
+      <img src="images/image-product-desktop.jpg" alt="Gabrielle Essence Eau De Parfun">
+    </div>
+    <div class="product-info">
+      <p class="product-subtitle">Perfume</p>
+      <h1 class="product-title">Gabrielle Essence Eau De Parfum</h1>
+      <p class="product-summary">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.</p>
+      <p class="product-price">
+        <span class="product-price-discount">$149.99</span>
+        <span class="product-price-original">$169.99</span>
+      </p>
+      <a class="product-add-to-cart">
+        <img src="images/icon-cart.svg" alt="">
+        <span>Add to Cart</span>
+      </a>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/tomhaeck">Tom Haeck</a>.
+  </div>
+</body>
+</html>
