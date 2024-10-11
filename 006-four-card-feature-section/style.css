@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;1,200;1,400;1,600&display=swap");
+
+:root {
+    /* primary colors */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* neutral colors */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* CSS reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--very-light-gray);
+    color: var(--grayish-blue);
+
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+
+    width: 540px;
+    margin-top: 80px;
+}
+
+header h1 {
+    color: var(--very-dark-blue);
+
+    font-weight: 200;
+    font-size: 36px;
+}
+
+header h2 {
+    color: var(--very-dark-blue);
+
+    font-weight: 600;
+    font-size: 36px;
+
+    margin-bottom: 16px;
+}
+
+.cards {
+    width: 1110px;
+    height: 530px;
+    margin-top: calc(312px - 80px - 160px - 4px);  /* calculation based on Figma offsets */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards .cards-stacked {
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: white;
+
+    width: 350px;
+    border-radius: 8px;
+    border-top-style: solid;
+    border-top-width: 4px;
+    padding: 32px;
+
+    box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.25);
+}
+
+.card h3 {
+    color: var(--very-dark-blue);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.card p {
+    margin-bottom: 33px;
+}
+
+.card-image {
+    width: 100%;
+    text-align: right;
+}
+
+.card-supervisor {
+    border-top-color: var(--cyan);
+}
+
+.card-team-builder {
+    border-top-color: var(--red);
+}
+
+.card-karma {
+    border-top-color: var(--orange);
+}
+
+.card-calculator {
+    border-top-color: var(--blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    width: 100%;
+    padding: 4px;
+    margin-top: 24px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 500px) {
+
+    header {
+        width: 311px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header h2 {
+        font-size: 24px;
+    }
+
+    .cards {
+        width: 311px;
+        height: auto;
+        margin-top: calc(322px - 85px - 161px);  /* calculation based on Figma offsets */
+
+        flex-direction: column;
+        justify-content: unset;
+        align-items: stretch;
+        row-gap: 25px;
+    }
+
+    .cards .cards-stacked {
+        align-self: unset;
+        justify-content: unset;
+        row-gap: 25px;
+    }
+
+    .card {
+        width: 100%;
+        row-gap: unset;
+    }
+
+    .card p {
+        margin-bottom: 23px;
+    }
+
+    .card-image img {
+        width: 57px;
+        height: 57px;
+    }
+}
